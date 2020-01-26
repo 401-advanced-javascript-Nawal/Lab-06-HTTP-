@@ -1,0 +1,18 @@
+{
+  "categories": [
+    {
+      "name": "sport",
+      "display_name": "sports",
+      "description": "all about sports"
+    }
+  ],
+  "products": [
+    {
+      "category": "sport",
+      "name": "addidas",
+      "display_name": "addi",
+      "description": "addidas sports ",
+      "_id": 1
+    }
+  ]
+}
