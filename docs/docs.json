@@ -1,20 +1,69 @@
 {
     "openapi" : "3.0.1",
     "info" : {
-      "title" : "defaultTitle",
-      "description" : "defaultDescription",
+      "title" : "lab-06-http",
+      "description" : "REST Methods",
       "version" : "0.1"
     },
     "servers" : [ {
       "url" : "http://localhost:3000"
     } ],
     "paths" : {
-      "/categories/1" : {
-        "delete" : {
-          "description" : "Auto generated using Swagger Inspector",
+      "/categories/2" : {
+        "put" : {
+          "description" : "update an existing item",
+          "requestBody" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : {
+                    "name" : {
+                      "type" : "string"
+                    },
+                    "description" : {
+                      "type" : "string"
+                    },
+                    "display_name" : {
+                      "type" : "string"
+                    }
+                  }
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\"name\":\"sport\",\"display_name\": \"sports\",\"description\":\"all about sports\"}"
+                  }
+                }
+              }
+            }
+          },
           "responses" : {
             "200" : {
-              "description" : "Auto generated using Swagger Inspector",
+              "description" : "passed",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/products/3" : {
+        "delete" : {
+          "description" : "remove an item from json file",
+          "responses" : {
+            "404" : {
+              "description" : "remove an item",
               "content" : {
                 "application/json; charset=utf-8" : {
                   "schema" : {
@@ -34,35 +83,36 @@
         } ]
       },
       "/categories" : {
-        "get" : {
-          "description" : "Auto generated using Swagger Inspector",
-          "responses" : {
-            "200" : {
-              "description" : "Auto generated using Swagger Inspector",
-              "content" : {
-                "application/json; charset=utf-8" : {
-                  "schema" : {
-                    "type" : "string"
-                  },
-                  "examples" : { }
+        "post" : {
+          "description" : "add new item into json file",
+          "requestBody" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : {
+                    "name" : {
+                      "type" : "string"
+                    },
+                    "description" : {
+                      "type" : "string"
+                    },
+                    "display_name" : {
+                      "type" : "string"
+                    }
+                  }
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\"name\":\"shoe\",\"display_name\": \"shoes\",\"description\":\"all about shoe\"}"
+                  }
                 }
               }
             }
           },
-          "servers" : [ {
-            "url" : "http://localhost:3000"
-          } ]
-        },
-        "servers" : [ {
-          "url" : "http://localhost:3000"
-        } ]
-      },
-      "/products/2" : {
-        "delete" : {
-          "description" : "Auto generated using Swagger Inspector",
           "responses" : {
-            "200" : {
-              "description" : "Auto generated using Swagger Inspector",
+            "201" : {
+              "description" : "passed",
               "content" : {
                 "application/json; charset=utf-8" : {
                   "schema" : {
